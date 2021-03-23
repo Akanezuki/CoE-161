@@ -1,5 +1,4 @@
 def prefix_free_decode(decoder, bit_string):
-    bs_index = 0
     tlist = []
     slist = []
     for x in range(len(bit_string)):
