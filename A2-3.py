@@ -13,7 +13,8 @@ def huffman_encode(encoder, samples):
 
     while len(samples) != 0:
         x = samples.pop(0)
-        sx = set(x)
+        sx = set()
+        sx.add(x)
         char_extract(encoder.root, sx, blist)
         
     ans = ''.join(blist)
