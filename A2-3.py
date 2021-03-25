@@ -11,11 +11,10 @@ def huffman_encode(encoder, samples):
         else:
             return
 
-    samplist = list(samples)
-    while len(samplist) != 0:
-        x = samplist.pop(0)
+    while len(samples) != 0:
+        x = samples.pop(0)
         sx = set(x)
         char_extract(encoder.root, sx, blist)
-
+        
     ans = ''.join(blist)
     return ans
