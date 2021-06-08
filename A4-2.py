@@ -84,6 +84,8 @@ def typical_set_codec(channel, x_dist, frame_len, block_len, num_frames, epsilon
             success += 1
 
     fail = num_frames - success
+    print(num_frames)
+    print(success)
     estimated_error_probability = fail/num_frames
 
     print(estimated_error_probability)
@@ -98,10 +100,10 @@ p = 0.01
 channel = [[0.95, 0, 0.05], [0, 0.95, 0.05]]
 #channel[x][y]
 
-frame_len = 3
+frame_len = 10
 x_dist = [1/2, 1/2]
-block_len = 100
-num_frames = 100
+block_len = 1000
+num_frames = 1000
 epsilon = 0.05
 
 typical_set_codec(channel, x_dist, frame_len, block_len, num_frames, epsilon)
